@@ -50,7 +50,7 @@ def findChatName(chatname, username, message):
         return f'<h1> Thank you for your message! </h1>'
 
 
-# Get all message from chat_ID
+# Get all message from chat name
 @app.route('/chat/<chatname>/list')
 @errorHandler
 def chatList(chatname):
