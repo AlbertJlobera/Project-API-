@@ -39,7 +39,7 @@ def creatChat(chatname,username):
             return f'<h1>Error: you are already in the chat.</h1>'
 
 
-#Find specific chat by name
+#Add message to a chat
 @app.route('/chat/<chatname>/user/<username>/message/<message>')
 @errorHandler
 def findChatName(chatname, username, message):
