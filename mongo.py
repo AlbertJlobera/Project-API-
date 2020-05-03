@@ -5,8 +5,8 @@ from config import DBURL
 client = MongoClient(DBURL, maxPoolSize=50, connect=False)
 print(f"Connected to DBURL")
 
-#Create database and collections
-db = client["Project"]
-messages = db["Messages"]
-chats = db["Chat"]
-users = db["Users"]
+#Create database 
+db = client["API"]
+
+# Create Collections
+unique = db['unique']
