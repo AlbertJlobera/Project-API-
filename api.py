@@ -34,7 +34,7 @@ def creatChat(chatname,username):
         query = db.unique.find({'$and': [{'Name': username},{'Chats': [chatname]}]},{'_id':0})
         if query.count() == 0:
             output =  db.unique.update({'Name': username},{'$set':{'Chats': [chatname]}})
-            return f'<h1> Hello, {username} the new chat "{chatname}" is Created!</h1><br><center><img src="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/04/12/Recortada/img_mrubal_20180412-112252_imagenes_lv_otras_fuentes_istock-819245942-kQsG-U442485828453q0E-992x558@LaVanguardia-Web.jpg"></center>''
+            return f'<h1> Hello, {username} the new chat "{chatname}" is Created!</h1><br><center><img src="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/04/12/Recortada/img_mrubal_20180412-112252_imagenes_lv_otras_fuentes_istock-819245942-kQsG-U442485828453q0E-992x558@LaVanguardia-Web.jpg"></center>'
         else:
             return f'<h1>Error: you are already in the chat.</h1><br><center><img src="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/04/12/Recortada/img_mrubal_20180412-112252_imagenes_lv_otras_fuentes_istock-819245942-kQsG-U442485828453q0E-992x558@LaVanguardia-Web.jpg"></center>'
 
