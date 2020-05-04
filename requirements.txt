@@ -1,4 +1,5 @@
 flask
 pymongo
 python-dotenv
-NLTK
+nltk==3.5
+dnspython
